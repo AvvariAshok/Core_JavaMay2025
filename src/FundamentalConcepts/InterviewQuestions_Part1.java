@@ -40,13 +40,32 @@ public class InterviewQuestions_Part1 {
 	  System.out.println("after swapp :" +a);
 	  System.out.println("after swapp :" +b);
 	 }
+	 
+//	 write a program to check a  number is Armstrong or not
+	 public static void checkNumberArmstrong(int number) {
+		 int tempnum=number;
+		int  sum=0;
+		while(tempnum>0) {
+			int remainder=tempnum %10;
+			 sum=sum+(remainder*remainder*remainder);
+			 tempnum=tempnum/10;
+			 
+		}
+		if(sum==number) {
+			System.out.println(number + " Number is an Armstrong Number");
+		}else{		
+			System.out.println(number + " Number is not an Armstrong Number");
+		}
+		 
+	 }
 		
 		
     public static void main(String[] args) {
 			
 //			SwapUsingThirdValue();
 //    	swappingUsingWithoutValue();
-    	 swapTwoStringValuesWithoutUsing3rd();
+//    	 swapTwoStringValuesWithoutUsing3rd();
+    	 checkNumberArmstrong(121);
     	 
 			
 	
